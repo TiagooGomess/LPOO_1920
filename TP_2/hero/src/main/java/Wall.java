@@ -3,9 +3,9 @@ import com.googlecode.lanterna.TerminalPosition;
 import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.graphics.TextGraphics;
 
-public class Hero {
+public class Wall {
     private Position position;
-    Hero(int x, int y) {
+    Wall(int x, int y) {
         position = new Position(x,y);
     }
     public int getX() {
@@ -20,24 +20,9 @@ public class Hero {
     public void setY(int y) {
         position.setY(y);
     }
-    public Position moveUp() {
-        return new Position(this.position.getX(), this.position.getY()-1);
-    }
-    public Position moveDown() {
-        return new Position(this.position.getX(), this.position.getY()+1);
-    }
-    public Position moveRight() {
-        return new Position(this.position.getX()+1, this.position.getY());
-    }
-    public Position moveLeft() {
-        return new Position(this.position.getX()-1, this.position.getY());
-    }
     public void draw(TextGraphics graphics) {
-        graphics.setForegroundColor(TextColor.Factory.fromString("#FFFF33"));
+        graphics.setForegroundColor(TextColor.Factory.fromString("#000000"));
         graphics.enableModifiers(SGR.BOLD);
         graphics.putString(new TerminalPosition(position.getX(), position.getY()), "X");
-    }
-    public void setPosition(Position position) {
-        this.position = position;
     }
 }
