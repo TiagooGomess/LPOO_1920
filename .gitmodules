@@ -1,6 +1,0 @@
-[submodule "TP_2/hero"]
-	path = TP_2/hero
-	url = git@github.com:TiagooGomess/hero.git
-[submodule "TP_1/hello"]
-	path = TP_1/hello
-	url = git@github.com:TiagooGomess/helloworld.git
