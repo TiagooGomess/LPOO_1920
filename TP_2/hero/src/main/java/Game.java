@@ -1,4 +1,3 @@
-import com.googlecode.lanterna.TextCharacter;
 import com.googlecode.lanterna.input.KeyType;
 import com.googlecode.lanterna.screen.Screen;
 import com.googlecode.lanterna.screen.TerminalScreen;
@@ -61,16 +60,16 @@ public class Game {
         System.out.println(key);
         switch (key.getKeyType()) {
             case ArrowUp:
-                hero.moveUp();
+                hero.moveHero(hero.moveUp());
                 break;
             case ArrowDown:
-                hero.moveDown();
+                hero.moveHero(hero.moveDown());
                 break;
             case ArrowRight:
-                hero.moveRight();
+                hero.moveHero(hero.moveRight());
                 break;
             case ArrowLeft:
-                hero.moveLeft();
+                hero.moveHero(hero.moveLeft());
                 break;
             default:
                 System.out.println("Not an arrow key!");

@@ -1,43 +1,42 @@
 import com.googlecode.lanterna.TextCharacter;
 import com.googlecode.lanterna.screen.Screen;
-import com.googlecode.lanterna.screen.TerminalScreen;
-import com.googlecode.lanterna.terminal.DefaultTerminalFactory;
-import com.googlecode.lanterna.terminal.Terminal;
-
-import java.io.IOException;
 
 public class Hero {
-    private int x = 10;
-    private int y = 10;
+    private Position position;
     Hero(int x, int y) {
-        this.x = x;
-        this.y = y;
+        position = new Position(x,y);
     }
     public int getX() {
-        return x;
+        return position.getX();
     }
     public int getY() {
-        return y;
+        return position.getY();
     }
     public void setX(int x) {
-        this.x = x;
+        position.setX(x);
     }
     public void setY(int y) {
-        this.y = y;
+        position.setY(y);
     }
-    public void moveUp() {
-        y--;
+    public Position moveUp() {
+        return new Position(this.position.getX(), this.position.getY()-1);
     }
-    public void moveDown() {
-        y++;
+    public Position moveDown() {
+        return new Position(this.position.getX(), this.position.getY()+1);
     }
-    public void moveRight() {
-        x++;
+    public Position moveRight() {
+        return new Position(this.position.getX()+1, this.position.getY());
     }
-    public void moveLeft() {
-        x--;
+    public Position moveLeft() {
+        return new Position(this.position.getX()-1, this.position.getY());
     }
     public void draw(Screen screen) {
-        screen.setCharacter(x, y, new TextCharacter('X'));
+        screen.setCharacter(position.getX(), position.getY(), new TextCharacter('X'));
+    }
+    public void setPosition(Position position) {
+        this.position = position;
+    }
+    public void moveHero(Position position) {
+        this.setPosition(position);
     }
 }
