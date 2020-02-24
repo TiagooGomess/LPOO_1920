@@ -20,7 +20,6 @@ public class Arena {
         this.walls = createWalls();
 
     }
-
     public int processKey(com.googlecode.lanterna.input.KeyStroke key) throws IOException {
         switch (key.getKeyType()) {
             case ArrowUp:
@@ -41,7 +40,6 @@ public class Arena {
         }
         return 0;
     }
-
     public Boolean wallCollision(Position position) {
         for (Wall wall: walls) {
             if (wall.getPosition().equals(position))
@@ -49,7 +47,6 @@ public class Arena {
         }
         return false;
     }
-
     public Boolean canHeroMove(Position position) {
 
         if (wallCollision(position))
@@ -57,7 +54,6 @@ public class Arena {
         else
             return true;
     }
-
     public void moveHero(Position position) {
         if (canHeroMove(position))
             hero.setPosition(position);
@@ -70,7 +66,6 @@ public class Arena {
         for (Wall wall: walls)
             wall.draw(graphics);
     }
-
     private List<Wall> createWalls() {
         List<Wall> walls = new ArrayList<>();
         for (int c = 0; c < width; c++) {
