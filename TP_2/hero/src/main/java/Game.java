@@ -1,3 +1,4 @@
+import com.googlecode.lanterna.graphics.TextGraphics;
 import com.googlecode.lanterna.input.KeyStroke;
 import com.googlecode.lanterna.input.KeyType;
 import com.googlecode.lanterna.screen.Screen;
@@ -10,13 +11,16 @@ import java.io.IOException;
 public class Game {
     private Screen screen;
     Arena arena;
+    TextGraphics graphics;
 
     Game() {
         try {
-            arena = new Arena(100, 100);
+            arena = new Arena(80, 24);
 
             Terminal terminal = new DefaultTerminalFactory().createTerminal();
             screen = new TerminalScreen(terminal);
+
+            graphics = screen.newTextGraphics();
 
             screen.setCursorPosition(null);   // we don't need a cursor
             screen.startScreen();             // screens must be started
@@ -29,7 +33,7 @@ public class Game {
     private void draw() {
         try {
             screen.clear();
-            arena.draw(screen);
+            arena.draw(screen.newTextGraphics());
             screen.refresh();
 
         } catch (IOException e) {
