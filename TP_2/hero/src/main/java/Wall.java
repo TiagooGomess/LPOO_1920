@@ -20,6 +20,9 @@ public class Wall {
     public void setY(int y) {
         position.setY(y);
     }
+    public Position getPosition() {
+        return position;
+    }
     public void draw(TextGraphics graphics) {
         graphics.setForegroundColor(TextColor.Factory.fromString("#000000"));
         graphics.enableModifiers(SGR.BOLD);

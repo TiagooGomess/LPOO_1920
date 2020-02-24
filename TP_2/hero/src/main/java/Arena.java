@@ -42,8 +42,17 @@ public class Arena {
         return 0;
     }
 
+    public Boolean wallCollision(Position position) {
+        for (Wall wall: walls) {
+            if (wall.getPosition().equals(position))
+                return true;
+        }
+        return false;
+    }
+
     public Boolean canHeroMove(Position position) {
-        if (position.getX() + 1 > width - 1 || position.getX() - 1 < -1 + 1 || position.getY() + 1 > height - 1 || position.getY() - 1 < -1 + 1)
+
+        if (wallCollision(position))
             return false;
         else
             return true;
