@@ -15,6 +15,7 @@ public class Arena {
     private Hero hero;
     private List<Wall> walls;
     private List<Coin> coins;
+    private List<Monster> monsters;
 
     Arena(int width, int height) {
         this.width = width;
@@ -22,9 +23,15 @@ public class Arena {
         hero = new Hero(10, 10);
         this.walls = createWalls();
         this.coins = createCoins();
+        this.monsters = createMonsters();
 
     }
     public int processKey(com.googlecode.lanterna.input.KeyStroke key) throws IOException {
+        moveMonsters();
+        if (verifyMonsterCollisions(hero.getPosition())) {
+            System.out.println("You lost!");
+            return 1; // end game
+        }
         switch (key.getKeyType()) {
             case ArrowUp:
                 this.moveHero(hero.moveUp());
@@ -72,6 +79,8 @@ public class Arena {
         for (Coin coin: coins)
             coin.draw(graphics);
         retriveCoins();
+        for (Monster monster: monsters)
+            monster.draw(graphics);
     }
     private List<Wall> createWalls() {
         List<Wall> walls = new ArrayList<>();
@@ -101,6 +110,34 @@ public class Arena {
                 break;
             }
         }
+    }
+    private List<Monster> createMonsters() {
+        Random random = new Random();
+        ArrayList<Monster> monsters = new ArrayList<>();
+        for (int i = 0; i < 5; i++)
+            monsters.add(new Monster(random.nextInt(width - 2) + 1, random.nextInt(height - 2) + 1));
+        return monsters;
+    }
+    private void moveMonsters() {
+        Random random = new Random();
+        int randomNumber = random.nextInt(4); // 0, 1, 2 or 3
+        for (Monster monster: monsters) {
+            if (canMonsterMove(monster.move(randomNumber)))
+                monster.setPosition(monster.move(randomNumber));
+        }
+    }
+    private Boolean canMonsterMove(Position position) {
+        if (wallCollision(position))
+            return false;
+        else
+            return true;
+    }
+    public Boolean verifyMonsterCollisions(Position position) {
+        for (Monster monster: monsters) {
+            if (monster.getPosition().equals(position))
+                return true;
+        }
+        return false;
     }
 
 }
