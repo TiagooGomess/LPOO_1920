@@ -29,6 +29,10 @@ public class Arena {
     public int processKey(com.googlecode.lanterna.input.KeyStroke key) throws IOException {
         moveMonsters();
         if (verifyMonsterCollisions(hero.getPosition())) {
+            hero.decrementEnergy();
+            System.out.println("Energy: " + hero.getEnergy());
+        }
+        if (heroDied()) {
             System.out.println("You lost!");
             return 1; // end game
         }
@@ -137,6 +141,11 @@ public class Arena {
             if (monster.getPosition().equals(position))
                 return true;
         }
+        return false;
+    }
+    public Boolean heroDied() {
+        if (hero.getEnergy() == 0)
+            return true;
         return false;
     }
 
