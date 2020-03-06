@@ -13,7 +13,7 @@ public class Speaker extends Person {
 
     @Override
     public String toString() {
-        return "Speaker " + super.getName() + " as a fee value of " + this.getFee() + ".";
+        return "Speaker " + super.getName() + " has a fee value of " + this.getFee() + ".";
     }
 
 

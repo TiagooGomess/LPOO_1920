@@ -6,7 +6,7 @@ public class Party extends Event {
         super(title, date, description);
     }
     public void addEvent(Event event) {
-        List<Person> persons = super.getPersons();
+        List<Person> persons = event.getPersons();
         Iterator itr = persons.iterator();
         while (itr.hasNext()) {
             Person p = (Person) itr.next();
