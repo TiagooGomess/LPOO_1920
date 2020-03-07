@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9b435420-c662-432d-9308-eb90bd7ac2cd" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="338" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="JavaAutoRunManager">
+    <enabled-run-configurations>
+      <run-configuration type="JUnit" name="TestCases" />
+    </enabled-run-configurations>
+  </component>
+  <component name="ProjectId" id="1YlqDbH7jI3Ez3JaUcRXVV2ZNgz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553520726322" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TestLogicCircuits">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestLogicCircuits" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="quiz" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestLogicCircuits" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestLogicCircuits.testColision" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="quiz" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestLogicCircuits" />
+      <option name="METHOD_NAME" value="testColision" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestLogicCircuits.testCycles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="quiz" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestLogicCircuits" />
+      <option name="METHOD_NAME" value="testCycles" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestLogicCircuits.testFormulas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="quiz" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestLogicCircuits" />
+      <option name="METHOD_NAME" value="testFormulas" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestLogicCircuits.testValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="quiz" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestLogicCircuits" />
+      <option name="METHOD_NAME" value="testValues" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestLogicCircuits" />
+        <item itemvalue="JUnit.TestLogicCircuits.testCycles" />
+        <item itemvalue="JUnit.TestLogicCircuits.testValues" />
+        <item itemvalue="JUnit.TestLogicCircuits.testFormulas" />
+        <item itemvalue="JUnit.TestLogicCircuits.testColision" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../Example" value="PREVIEW" />
+        <entry key="$USER_HOME$/Dropbox/Documents/Projects/Scala/Example" value="PREVIEW" />
+        <entry key="$USER_HOME$/Dropbox/Documents/Projects/Scala/recfun" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b435420-c662-432d-9308-eb90bd7ac2cd" name="Default Changelist" comment="" />
+      <created>1553507421844</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1553507421844</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="588" y="214" width="800" height="677" key="#Project_Structure" timestamp="1583527437192">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="588" y="214" width="800" height="677" key="#Project_Structure/67.27.1853.1053@67.27.1853.1053" timestamp="1583527437192" />
+    <state x="167" y="125" width="1653" height="855" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1583593181391">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="167" y="125" width="1653" height="855" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1583593181391" />
+    <state x="801" y="239" width="374" height="626" key="#com.intellij.ide.util.MemberChooser" timestamp="1583581221337">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="801" y="239" width="374" height="626" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1583581221337" />
+    <state x="832" y="444" width="312" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1583527444663">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="832" y="444" width="312" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1583527444663" />
+    <state x="487" y="93" width="1003" height="919" key="CommitChangelistDialog2" timestamp="1583529941003">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="487" y="93" width="1003" height="919" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1583529941003" />
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1583536830153">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1583536830153" />
+    <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1583596930410">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1583596930410" />
+    <state width="1807" height="278" key="GridCell.Tab.0.center" timestamp="1583596930408">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="278" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1583596930408" />
+    <state width="1807" height="278" key="GridCell.Tab.0.left" timestamp="1583596930407">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="278" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1583596930407" />
+    <state width="1807" height="278" key="GridCell.Tab.0.right" timestamp="1583596930409">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1583596930409" />
+    <state width="1807" height="344" key="GridCell.Tab.1.bottom" timestamp="1583596040475">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="344" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1583596040475" />
+    <state width="1807" height="344" key="GridCell.Tab.1.center" timestamp="1583596040475">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="344" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1583596040475" />
+    <state width="1807" height="344" key="GridCell.Tab.1.left" timestamp="1583596040475">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="344" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1583596040475" />
+    <state width="1807" height="344" key="GridCell.Tab.1.right" timestamp="1583596040475">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1583596040475" />
+    <state x="475" y="187" key="SettingsEditor" timestamp="1583530133625">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="475" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1583530133625" />
+    <state x="657" y="253" key="run.anything.popup" timestamp="1583534109479">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="657" y="253" key="run.anything.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1583534109479" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/quiz$All_in_quiz.ic" NAME="All in quiz Coverage Results" MODIFIED="1583580837524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/quiz$TestLogicCircuits.ic" NAME="TestLogicCircuits Coverage Results" MODIFIED="1583580433544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/quiz$TestCases.ic" NAME="TestCases Coverage Results" MODIFIED="1583536554163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
