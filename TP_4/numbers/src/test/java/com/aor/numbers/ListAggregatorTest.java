@@ -9,7 +9,7 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class ListAggregatorTest {
-    private List<Integer> list;
+    public List<Integer> list;
 
     @Before
     public void helper() {
@@ -23,7 +23,6 @@ public class ListAggregatorTest {
 
     @Test
     public void sum() {
-
         ListAggregator aggregator = new ListAggregator(list);
 
         int sum = aggregator.sum();
@@ -33,16 +32,6 @@ public class ListAggregatorTest {
 
     @Test
     public void max() {
-
-        List<Integer> section4 = new ArrayList<>();
-        section4.add(-1);
-        section4.add(-4);
-        section4.add(-5);
-
-        ListAggregator aggregator4 = new ListAggregator(section4);
-        int max4 = aggregator4.max();
-        assertEquals(-1, max4);
-
         ListAggregator aggregator = new ListAggregator(list);
 
         int max = aggregator.max();
@@ -52,7 +41,6 @@ public class ListAggregatorTest {
 
     @Test
     public void min() {
-
         ListAggregator aggregator = new ListAggregator(list);
 
         int min = aggregator.min();
@@ -62,11 +50,66 @@ public class ListAggregatorTest {
 
     @Test
     public void distinct() {
+        List<Integer> myList = new ArrayList<>();
+        myList.add(1);
+        myList.add(2);
+        myList.add(4);
+        myList.add(5);
 
-        ListAggregator aggregator = new ListAggregator(list);
-
-        int distinct = aggregator.distinct();
+        ListAggregator aggregator = new ListAggregator(myList);
+        int distinct = aggregator.distinct(new StubDatabase(myList));
 
         assertEquals(4, distinct);
+    }
+
+    @Test
+    public void cornerCase() {
+        List<Integer> myList = new ArrayList<>();
+        myList.add(-1);
+        myList.add(-4);
+        myList.add(-5);
+
+        ListAggregator aggregator = new ListAggregator(myList);
+
+        int max = aggregator.max();
+
+        assertEquals(-1, max);
+    }
+
+    class StubDatabase implements IListDeduplicator {
+        private List<Integer> myList;
+
+        StubDatabase(List<Integer> list) {
+            this.myList = list;
+        }
+
+        public List<Integer> deduplicate() {
+            return myList;
+        }
+    }
+
+    class StubSorted implements IListSorted {
+        private List<Integer> myList;
+
+        StubSorted(List<Integer> list) {
+            this.myList = list;
+        }
+
+        public List<Integer> sort() {
+            return this.myList;
+        }
+    }
+
+    @Test
+    public void distinctCase() {
+        List<Integer> myList = new ArrayList<>();
+        myList.add(1);
+        myList.add(2);
+        myList.add(4);
+
+        ListAggregator aggregator = new ListAggregator(myList);
+        int distinct = aggregator.distinct(new StubDatabase(myList));
+
+        assertEquals(3, distinct);
     }
 }
