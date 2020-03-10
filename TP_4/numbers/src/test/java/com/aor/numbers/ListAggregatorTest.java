@@ -34,6 +34,15 @@ public class ListAggregatorTest {
     @Test
     public void max() {
 
+        List<Integer> section4 = new ArrayList<>();
+        section4.add(-1);
+        section4.add(-4);
+        section4.add(-5);
+
+        ListAggregator aggregator4 = new ListAggregator(section4);
+        int max4 = aggregator4.max();
+        assertEquals(-1, max4);
+
         ListAggregator aggregator = new ListAggregator(list);
 
         int max = aggregator.max();
