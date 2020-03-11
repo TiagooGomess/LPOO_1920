@@ -15,6 +15,7 @@ public class ListAggregator {
 
     /**
      * Sums all numbers in a list.
+     *
      * @return The sum of all the values in the list.
      */
     public Integer sum() {
@@ -28,10 +29,11 @@ public class ListAggregator {
 
     /**
      * Calculates the maximum value in a list.
+     *
      * @return The maximum value in the list.
      */
     public Integer max() {
-        int max = Integer.MIN_VALUE;
+        int max = Integer.MIN_VALUE; // Changed in 4. Corner Cases...
 
         for (Integer number : list)
             if (number > max)
@@ -42,6 +44,7 @@ public class ListAggregator {
 
     /**
      * Calculates the minimum value in a list.
+     *
      * @return The minimum value in the list.
      */
     public Integer min() {
@@ -56,11 +59,11 @@ public class ListAggregator {
 
     /**
      * Counts the number of distinct numbers in a list.
+     *
      * @return The number of distinct numbers.
      */
-    public int distinct(IListDeduplicator deduplicator) {
-        //ListDeduplicator deduplicator = new ListDeduplicator(list);
-        List<Integer> distinct = deduplicator.deduplicate();
+    public int distinct(IListDeduplicator deduplicator, IListSorted listSorted) {
+        List<Integer> distinct = deduplicator.deduplicate(listSorted);
 
         return distinct.size();
     }

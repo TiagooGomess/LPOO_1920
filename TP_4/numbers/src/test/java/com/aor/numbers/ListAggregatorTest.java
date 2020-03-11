@@ -2,6 +2,7 @@ package com.aor.numbers;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,7 +58,7 @@ public class ListAggregatorTest {
         myList.add(5);
 
         ListAggregator aggregator = new ListAggregator(myList);
-        int distinct = aggregator.distinct(new StubDatabase(myList));
+        int distinct = aggregator.distinct(new StubDatabase(myList), new ListDeduplicatorTest.StubSorted(myList));
 
         assertEquals(4, distinct);
     }
@@ -81,22 +82,18 @@ public class ListAggregatorTest {
 
         StubDatabase(List<Integer> list) {
             this.myList = list;
+
         }
 
-        public List<Integer> deduplicate() {
+        public List<Integer> deduplicate(IListSorted listSorter)
+        {
+            /* List<Integer> myList = new ArrayList<>();
+            myList.add(1);
+            myList.add(2);
+            myList.add(4); */
+            // 1,2,4,2 -> 1, 2, 4
+
             return myList;
-        }
-    }
-
-    class StubSorted implements IListSorted {
-        private List<Integer> myList;
-
-        StubSorted(List<Integer> list) {
-            this.myList = list;
-        }
-
-        public List<Integer> sort() {
-            return this.myList;
         }
     }
 
@@ -108,8 +105,16 @@ public class ListAggregatorTest {
         myList.add(4);
 
         ListAggregator aggregator = new ListAggregator(myList);
-        int distinct = aggregator.distinct(new StubDatabase(myList));
+
+        IListDeduplicator deduplicator = Mockito.mock(IListDeduplicator.class);
+        IListSorted listSorter = Mockito.mock(IListSorted.class);
+        Mockito.when(listSorter.sort()).thenReturn(myList);
+        Mockito.when(deduplicator.deduplicate(listSorter)).thenReturn(myList);
+
+        // int distinct = aggregator.distinct(new StubDatabase(myList), new ListDeduplicatorTest.StubSorted(myList));
+        int distinct = aggregator.distinct(deduplicator, listSorter);
 
         assertEquals(3, distinct);
     }
+
 }
