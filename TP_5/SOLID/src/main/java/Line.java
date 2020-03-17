@@ -12,8 +12,4 @@ public class Line implements BasicShape {
         this.length = length;
     }
 
-    @Override
-    public double getArea() {
-        return 0;
-    }
 }
