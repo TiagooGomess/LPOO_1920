@@ -1,0 +1,22 @@
+public class Application {
+    public static void main(String[] args) {
+        Shape circle1 = new Circle(1.5);
+        Shape square = new Square(2.3);
+        Shape circle2 = new Circle(4.3);
+        Shape ellipse = new Ellipse(4.3, 2.7);
+
+        AreaAggregator areaAggregator = new AreaAggregator();
+        areaAggregator.addShape(circle1);
+        areaAggregator.addShape(square);
+        areaAggregator.addShape(circle2);
+        areaAggregator.addShape(ellipse);
+
+        //System.out.println(areaAggregator.output());
+
+        AreaStringOutputter stringOutputter = new AreaStringOutputter(areaAggregator);
+        AreaXMLOutputter xmlOutputter = new AreaXMLOutputter(areaAggregator);
+
+        System.out.println(stringOutputter.output());
+        System.out.println(xmlOutputter.output());
+    }
+}
