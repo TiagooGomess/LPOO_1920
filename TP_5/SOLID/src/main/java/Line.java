@@ -1,4 +1,4 @@
-public class Line implements BasicShape {
+public class Line implements Shape {
     private double length;
     Line(double length) {
         this.length = length;
@@ -12,4 +12,8 @@ public class Line implements BasicShape {
         this.length = length;
     }
 
+    @Override
+    public void draw() {
+        System.out.println(this.getClass());
+    }
 }
