@@ -1,26 +1,29 @@
 public class Application {
     public static void main(String[] args) {
-        AreaShape circle1 = new Circle(1.5);
-        AreaShape square = new Square(2.3);
-        AreaShape circle2 = new Circle(4.3);
-        AreaShape ellipse = new Ellipse(4.3, 2.7);
-        AreaShape rectangle = new Rectangle(3.4, 2.5);
-        AreaShape triangle = new Triangle(4.2, 6.4);
+        AreaAggregator aggregator = new AreaAggregator();
 
-        ellipse.draw();
+        aggregator.addArea(new Square(10));
+        aggregator.addArea(new Circle(5));
+        aggregator.addArea(new Circle(2));
+        aggregator.addArea(new Ellipse(2, 3));
+        aggregator.addArea(new Rectangle(10, 5));
+        aggregator.addArea(new Triangle(10, 2));
+        aggregator.addArea(new House(100));
 
-        AreaAggregator areaAggregator = new AreaAggregator();
-        areaAggregator.addShape(circle1);
-        areaAggregator.addShape(square);
-        areaAggregator.addShape(circle2);
-        areaAggregator.addShape(ellipse);
-        areaAggregator.addShape(rectangle);
-        areaAggregator.addShape(triangle);
-
-        AreaStringOutputter stringOutputter = new AreaStringOutputter(areaAggregator);
-        AreaXMLOutputter xmlOutputter = new AreaXMLOutputter(areaAggregator);
+        AreaStringOutputter stringOutputter = new AreaStringOutputter(aggregator);
+        AreaXMLOutputter xmlOutputter = new AreaXMLOutputter(aggregator);
 
         System.out.println(stringOutputter.output());
         System.out.println(xmlOutputter.output());
+
+        City city = new City();
+        city.addHouse(new House(50));
+        city.addHouse(new House(150));
+
+        AreaStringOutputter cityStringOutputter = new AreaStringOutputter(city);
+        AreaXMLOutputter cityXmlOutputter = new AreaXMLOutputter(city);
+
+        System.out.println(cityStringOutputter.output());
+        System.out.println(cityXmlOutputter.output());
     }
 }
