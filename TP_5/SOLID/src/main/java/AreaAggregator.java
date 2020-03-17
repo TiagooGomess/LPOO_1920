@@ -11,19 +11,9 @@ public class AreaAggregator {
     public double sum() {
         double sum = 0;
         for (Shape shape: shapes) {
-            if(shape.getClass().equals(Circle.class)) {
-                sum += Math.PI * Math.pow(((Circle) shape).getRadius(), 2);
-            } else if (shape.getClass().equals(Square.class)) {
-                sum += Math.pow(((Square) shape).getSide(), 2);
-            } else if (shape.getClass().equals(Ellipse.class)) {
-                sum += Math.PI * ((Ellipse) shape).getX_radius() * ((Ellipse) shape).getY_radius();
-            }
+            sum += shape.getArea();
         }
         return sum;
-    }
-
-    public String output() {
-        return "Sum of areas: " + sum();
     }
 
 }
