@@ -17,6 +17,6 @@ public class HumanClient implements Client {
 
     @Override
     public void happyHourEnded(Bar bar) {
-        
+
     }
 }
