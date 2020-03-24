@@ -7,7 +7,6 @@ public class StringInverter implements StringTransformer {
 
     @Override
     public void undo(StringDrink drink) {
-        StringBuffer sb = new StringBuffer(drink.getText());
-        drink.setText(sb.reverse().toString());
+        execute(drink);
     }
 }
